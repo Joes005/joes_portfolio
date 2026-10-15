@@ -54,22 +54,22 @@ export default function PamidorHero() {
       id="top"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full min-h-[100svh] bg-canvas flex flex-col justify-between pt-28 pb-0 lg:pt-32 overflow-hidden border-b border-rule"
+      className="relative w-full min-h-[100svh] bg-canvas flex flex-col justify-between pt-24 sm:pt-28 lg:pt-32 pb-0 overflow-hidden border-b border-rule"
     >
       {/* Main Hero Container */}
-      <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-16 my-auto py-8 lg:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[calc(100svh-14rem)]">
+      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12 xl:px-16 my-auto py-8 lg:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8 xl:gap-12 items-center">
           {/* Left Column: Exactly matches the user requirements & Pamidor aesthetic */}
-          <div className="lg:col-span-7 z-20 space-y-6">
+          <div className="lg:col-span-7 z-20 flex flex-col justify-center space-y-5 sm:space-y-6">
             {/* Eyebrow Label */}
             <div className="flex items-center gap-2.5 font-space text-xs font-bold tracking-widest uppercase text-accent">
-              <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
+              <span className="w-2 h-2 rounded-full bg-accent animate-ping shrink-0" />
               <span>FULL-STACK DEVELOPMENT · BACKEND ENGINEERING · AI SOLUTIONS</span>
             </div>
 
             {/* Giant Name Headline */}
             <div className="select-none">
-              <h1 className="font-funnel font-black text-ink tracking-tight text-[3.8rem] sm:text-[5.2rem] lg:text-[6.5rem] leading-[0.88]">
+              <h1 className="font-funnel font-black text-ink tracking-tight text-[3.2rem] xs:text-[3.8rem] sm:text-[4.6rem] md:text-[5.2rem] lg:text-[5.6rem] xl:text-[6.4rem] leading-[0.88]">
                 <span className="block text-ink">
                   <HwText text="Levin" flashColor="#D12424" />
                 </span>
@@ -80,7 +80,7 @@ export default function PamidorHero() {
             </div>
 
             {/* Subheading and Description */}
-            <div className="space-y-3 text-ink max-w-xl pt-1">
+            <div className="space-y-2.5 sm:space-y-3 text-ink max-w-xl">
               <h2 className="font-funnel text-xl sm:text-2xl font-bold text-ink leading-tight">
                 I Build Digital Products That Solve Real Problems.
               </h2>
@@ -90,7 +90,7 @@ export default function PamidorHero() {
             </div>
 
             {/* Two Rows of Bordered Technical Badges: Group 1 (Core Expertise) & Group 2 (Technologies) */}
-            <div className="pt-1 space-y-2.5">
+            <div className="space-y-2.5 pt-0.5">
               {/* Group 1 — Core Expertise */}
               <div className="flex flex-wrap gap-2 sm:gap-2.5">
                 {coreExpertise.map((item) => (
@@ -117,7 +117,7 @@ export default function PamidorHero() {
             </div>
 
             {/* Action Buttons: [Explore My Work] [Let's Work Together] [Resume] */}
-            <div className="pt-3 flex flex-wrap items-center gap-2.5 sm:gap-4 font-space text-xs font-bold uppercase tracking-wider">
+            <div className="pt-1 flex flex-wrap items-center gap-2.5 sm:gap-3.5 font-space text-xs font-bold uppercase tracking-wider">
               {/* Primary CTA — Explore My Work (Scrolls to Projects section) */}
               <a
                 href="#projects"
@@ -128,7 +128,7 @@ export default function PamidorHero() {
                     target.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-accent dark:hover:bg-accent dark:hover:text-white transition-all duration-200 shadow-md font-space text-xs font-bold uppercase tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-accent dark:hover:bg-accent dark:hover:text-white transition-all duration-200 shadow-md font-space text-xs font-bold uppercase tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
                 aria-label="Explore My Work - Scroll to Projects Section"
               >
                 <HwText text="EXPLORE MY WORK" baseColor="currentColor" flashColor="#FFFFFF" />
@@ -145,7 +145,7 @@ export default function PamidorHero() {
                     contactSection.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-rule text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-rule text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
                 aria-label="Let's Work Together - Scroll to Contact Section"
               >
                 <span>LET'S WORK TOGETHER</span>
@@ -155,7 +155,7 @@ export default function PamidorHero() {
               {/* Resume Button */}
               <Link
                 to="/resume"
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-black/[0.04] dark:bg-white/[0.05] border border-rule text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-black/[0.04] dark:bg-white/[0.05] border border-rule text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
                 aria-label="View Resume & Credentials"
               >
                 <FileText className="w-3.5 h-3.5 text-accent" />
@@ -164,7 +164,7 @@ export default function PamidorHero() {
             </div>
 
             {/* Social Proof & Direct Channels */}
-            <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2.5 font-space text-xs text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">
+            <div className="pt-0.5 flex flex-wrap items-center gap-x-6 gap-y-2 font-space text-xs text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">
               <a
                 href="https://github.com/Joes005"
                 target="_blank"
@@ -199,7 +199,7 @@ export default function PamidorHero() {
           {/* Right Column: Hero Silhouette Portrait with Clean Frame and Parallax */}
           <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end w-full">
             <motion.div
-              className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[450px] xl:max-w-[480px] aspect-[4/5] overflow-hidden rounded-2xl select-none border border-rule/60 bg-black/[0.02] dark:bg-white/[0.02]"
+              className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] xl:max-w-[480px] aspect-[4/5] overflow-hidden rounded-2xl select-none border border-rule/60 bg-black/[0.02] dark:bg-white/[0.02]"
               animate={{
                 x: mouseOffset.x,
                 y: mouseOffset.y,
