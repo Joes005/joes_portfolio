@@ -164,31 +164,34 @@ export default function PamidorHero() {
             </div>
 
             {/* Social Proof & Direct Channels */}
-            <div className="pt-2 flex items-center gap-6 font-space text-xs text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">
+            <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2.5 font-space text-xs text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">
               <a
-                href="https://github.com"
+                href="https://github.com/Joes005"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 hover:text-accent transition-colors"
+                aria-label="GitHub Repository Profile - Joes005"
+                className="inline-flex items-center gap-1.5 hover:text-accent focus-visible:text-accent focus-visible:outline-none transition-colors duration-200"
               >
-                <GithubIcon className="w-3.5 h-3.5" />
+                <GithubIcon className="w-3.5 h-3.5 shrink-0" />
                 <span>GITHUB</span>
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 hover:text-accent transition-colors"
+                aria-label="LinkedIn Profile"
+                className="inline-flex items-center gap-1.5 hover:text-accent focus-visible:text-accent focus-visible:outline-none transition-colors duration-200"
               >
-                <LinkedinIcon className="w-3.5 h-3.5" />
+                <LinkedinIcon className="w-3.5 h-3.5 shrink-0" />
                 <span>LINKEDIN</span>
               </a>
               <a
                 href="mailto:levinjoeshwa.dev@gmail.com"
-                className="inline-flex items-center gap-1.5 hover:text-accent transition-colors"
+                aria-label="Send Email to levinjoeshwa.dev@gmail.com"
+                className="inline-flex items-center gap-1.5 hover:text-accent focus-visible:text-accent focus-visible:outline-none transition-colors duration-200 min-w-0"
               >
-                <Mail className="w-3.5 h-3.5" />
-                <span>LEVINJOESHWA.DEV@GMAIL.COM</span>
+                <Mail className="w-3.5 h-3.5 shrink-0 text-accent" />
+                <span className="truncate max-w-[230px] sm:max-w-none">LEVINJOESHWA.DEV@GMAIL.COM</span>
               </a>
             </div>
           </div>
