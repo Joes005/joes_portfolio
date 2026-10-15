@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { 
   ArrowRight, ArrowUpRight, FileText, Mail 
 } from "lucide-react";
@@ -8,19 +8,16 @@ import { GithubIcon, LinkedinIcon } from "../Common/SocialIcons";
 import HwText from "./HwText";
 
 export default function PamidorHero() {
-  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+  const shouldReduceMotion = useReducedMotion();
 
-  const handleMouseMove = (e) => {
-    const { clientX, clientY, currentTarget } = e;
-    const { width, height, left, top } = currentTarget.getBoundingClientRect();
-    const x = ((clientX - left) / width - 0.5) * 14;
-    const y = ((clientY - top) / height - 0.5) * 14;
-    setMouseOffset({ x, y });
-  };
-
-  const handleMouseLeave = () => {
-    setMouseOffset({ x: 0, y: 0 });
-  };
+  // Subtle, restrained entrance animation helper with reduced-motion support
+  const fadeUp = (delay, yOffset = 14, duration = 0.55) => ({
+    initial: shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: yOffset },
+    animate: { opacity: 1, y: 0 },
+    transition: shouldReduceMotion
+      ? { duration: 0 }
+      : { duration, ease: [0.25, 0.1, 0.25, 1], delay },
+  });
 
   const coreExpertise = [
     "Full-Stack Development",
@@ -52,23 +49,24 @@ export default function PamidorHero() {
   return (
     <section
       id="top"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       className="relative w-full min-h-[100svh] bg-canvas flex flex-col justify-between pt-24 sm:pt-28 lg:pt-32 pb-0 overflow-hidden border-b border-rule"
     >
       {/* Main Hero Container */}
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12 xl:px-16 my-auto py-8 lg:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8 xl:gap-12 items-center">
-          {/* Left Column: Exactly matches the user requirements & Pamidor aesthetic */}
+          {/* Left Column: Text content & Action controls */}
           <div className="lg:col-span-7 z-20 flex flex-col justify-center space-y-5 sm:space-y-6">
-            {/* Eyebrow Label */}
-            <div className="flex items-center gap-2.5 font-space text-xs font-bold tracking-widest uppercase text-accent">
+            {/* 1. Eyebrow Label with subtle entrance animation */}
+            <motion.div
+              {...fadeUp(0.08, 10, 0.5)}
+              className="flex items-center gap-2.5 font-space text-xs font-bold tracking-widest uppercase text-accent"
+            >
               <span className="w-2 h-2 rounded-full bg-accent animate-ping shrink-0" />
               <span>FULL-STACK DEVELOPMENT · BACKEND ENGINEERING · AI SOLUTIONS</span>
-            </div>
+            </motion.div>
 
-            {/* Giant Name Headline */}
-            <div className="select-none">
+            {/* 2. Giant Name Headline with smooth animation */}
+            <motion.div {...fadeUp(0.18, 16, 0.6)} className="select-none">
               <h1 className="font-funnel font-black text-ink tracking-tight text-[3.2rem] xs:text-[3.8rem] sm:text-[4.6rem] md:text-[5.2rem] lg:text-[5.6rem] xl:text-[6.4rem] leading-[0.88]">
                 <span className="block text-ink">
                   <HwText text="Levin" flashColor="#D12424" />
@@ -77,20 +75,23 @@ export default function PamidorHero() {
                   <HwText text="Joeshwa" flashColor="#D12424" />
                 </span>
               </h1>
-            </div>
+            </motion.div>
 
-            {/* Subheading and Description */}
-            <div className="space-y-2.5 sm:space-y-3 text-ink max-w-xl">
+            {/* 3. Subheading & Description revealed after the heading */}
+            <motion.div
+              {...fadeUp(0.32, 14, 0.55)}
+              className="space-y-2.5 sm:space-y-3 text-ink max-w-xl"
+            >
               <h2 className="font-funnel text-xl sm:text-2xl font-bold text-ink leading-tight">
                 I Build Digital Products That Solve Real Problems.
               </h2>
               <p className="font-serif italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base font-light leading-relaxed">
                 I design and develop modern web applications, reliable backend systems, and AI-powered solutions that help businesses turn complex requirements into practical digital products.
               </p>
-            </div>
+            </motion.div>
 
-            {/* Two Rows of Bordered Technical Badges: Group 1 (Core Expertise) & Group 2 (Technologies) */}
-            <div className="space-y-2.5 pt-0.5">
+            {/* Technology & Expertise Badges */}
+            <motion.div {...fadeUp(0.44, 12, 0.5)} className="space-y-2.5 pt-0.5">
               {/* Group 1 — Core Expertise */}
               <div className="flex flex-wrap gap-2 sm:gap-2.5">
                 {coreExpertise.map((item) => (
@@ -114,10 +115,13 @@ export default function PamidorHero() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
-            {/* Action Buttons: [Explore My Work] [Let's Work Together] [Resume] */}
-            <div className="pt-1 flex flex-wrap items-center gap-2.5 sm:gap-3.5 font-space text-xs font-bold uppercase tracking-wider">
+            {/* 4. Action Buttons with subtle fade and upward movement */}
+            <motion.div
+              {...fadeUp(0.54, 14, 0.55)}
+              className="pt-1 flex flex-wrap items-center gap-2.5 sm:gap-3.5 font-space text-xs font-bold uppercase tracking-wider"
+            >
               {/* Primary CTA — Explore My Work (Scrolls to Projects section) */}
               <a
                 href="#projects"
@@ -161,10 +165,13 @@ export default function PamidorHero() {
                 <FileText className="w-3.5 h-3.5 text-accent" />
                 <span>RESUME</span>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Social Proof & Direct Channels */}
-            <div className="pt-0.5 flex flex-wrap items-center gap-x-6 gap-y-2 font-space text-xs text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">
+            <motion.div
+              {...fadeUp(0.64, 10, 0.5)}
+              className="pt-0.5 flex flex-wrap items-center gap-x-6 gap-y-2 font-space text-xs text-neutral-600 dark:text-neutral-400 uppercase tracking-widest"
+            >
               <a
                 href="https://github.com/Joes005"
                 target="_blank"
@@ -193,18 +200,14 @@ export default function PamidorHero() {
                 <Mail className="w-3.5 h-3.5 shrink-0 text-accent" />
                 <span className="truncate max-w-[230px] sm:max-w-none">LEVINJOESHWA.DEV@GMAIL.COM</span>
               </a>
-            </div>
+            </motion.div>
           </div>
 
-          {/* Right Column: Hero Silhouette Portrait with Clean Frame and Parallax */}
+          {/* 5. Right Column: Hero Silhouette Portrait with restrained entrance animation */}
           <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end w-full">
             <motion.div
+              {...fadeUp(0.24, 16, 0.65)}
               className="relative w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] xl:max-w-[480px] aspect-[4/5] overflow-hidden rounded-2xl select-none border border-rule/60 bg-black/[0.02] dark:bg-white/[0.02]"
-              animate={{
-                x: mouseOffset.x,
-                y: mouseOffset.y,
-              }}
-              transition={{ type: "spring", stiffness: 120, damping: 22, mass: 0.8 }}
             >
               {/* Silhouette Hero Portrait Photo */}
               <img
