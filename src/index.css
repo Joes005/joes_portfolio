@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-canvas: #F5F2EB;
+  --canvas-rgb: 245 242 235;
+  --bg-canvas-subtle: #ECE7DE;
+  --canvas-subtle-rgb: 236 231 222;
+  --bg-canvas-card: #FFFFFF;
+  --canvas-card-rgb: 255 255 255;
+  --bg-night: #0D0D0B;
+  --text-ink: #0A0A0A;
+  --ink-rgb: 10 10 10;
+  --text-muted: #6B6964;
+  --ink-muted-rgb: 107 105 100;
+  --night-body: #C2C0B8;
+  --night-muted: #8E8D88;
+  --night-hr: rgba(255, 255, 255, 0.12);
+  --bg-rule: #DCD8CF;
+  --rule-rgb: 220 216 207;
+  --wave-flash: #D12424;
+  --hw-base: #0A0A0A;
+  --door-o: 28px;
+}
+
+html.dark {
+  --bg-canvas: #0A0A0A;
+  --canvas-rgb: 10 10 10;
+  --bg-canvas-subtle: #141414;
+  --canvas-subtle-rgb: 20 20 20;
+  --bg-canvas-card: #121212;
+  --canvas-card-rgb: 18 18 18;
+  --text-ink: #F8F8F8;
+  --ink-rgb: 248 248 248;
+  --text-muted: #999999;
+  --ink-muted-rgb: 153 153 153;
+  --bg-rule: rgba(255, 255, 255, 0.12);
+  --rule-rgb: 40 40 40;
+  --hw-base: #FFFFFF;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-ink);
+    transition: background-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+    letter-spacing: -0.015em;
+  }
+
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  ::selection {
+    background-color: #D12424;
+    color: #FFFFFF;
+  }
+
+  /* Minimalist studio scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D2CDC3;
+    border-radius: 9999px;
+  }
+
+  html.dark ::-webkit-scrollbar-thumb {
+    background: #252525;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A8A398;
+  }
+}
+
+/* =========================================================================
+   PAMIDOR SIGNATURE KINETIC ANIMATIONS (EXACT REVERSE-ENGINEERED KEYFRAMES)
+   ========================================================================= */
+
+/* 1. Kinetic Text Hover Wave (hw-sweep) */
+[data-hw] [data-hw-char] {
+  display: inline-block;
+  transition: color 0.2s linear;
+}
+
+[data-hw]:is(:hover, [data-hw-on="true"]) [data-hw-char] {
+  animation: hw-sweep 0.42s both;
+  animation-delay: calc(var(--hwi, 0) * 18ms);
+}
+
+@keyframes hw-sweep {
+  0% {
+    color: var(--hw-base, currentColor);
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  45% {
+    color: var(--wave-flash, #D12424);
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  }
+  100% {
+    color: var(--hw-base, currentColor);
+  }
+}
+
+/* 2. OPEN THE DOOR Physical Door Animation */
+[data-door] .door-o {
+  transform-origin: left;
+  animation: door-shut 4.5s infinite;
+}
+
+[data-door] .door-r {
+  animation: door-slide 4.5s infinite;
+}
+
+.door-add {
+  display: inline-block;
+  width: 0;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.door-add:before {
+  content: "O";
+}
+
+[data-door] .door-add {
+  animation: door-grow 4.5s infinite;
+}
+
+[data-door] .door-give {
+  animation: door-give 4.5s infinite;
+}
+
+@keyframes door-shut {
+  0% {
+    transform: scaleX(1);
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  7% {
+    opacity: 1;
+  }
+  8% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  28% {
+    transform: scaleX(0);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  29% {
+    opacity: 1;
+  }
+  36% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes door-slide {
+  0% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  8% {
+    transform: translateX(calc(-1 * var(--door-o, 28px)));
+  }
+  28% {
+    transform: translateX(calc(-1 * var(--door-o, 28px)));
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  36% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes door-grow {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  1% {
+    opacity: 1;
+  }
+  8% {
+    transform: scaleX(1);
+    width: auto;
+  }
+  28% {
+    transform: scaleX(1);
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  35% {
+    opacity: 1;
+  }
+  36% {
+    transform: scaleX(0);
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+    width: 0;
+  }
+}
+
+@keyframes door-give {
+  0% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  8% {
+    transform: translateX(var(--door-o, 28px));
+  }
+  28% {
+    transform: translateX(var(--door-o, 28px));
+    animation-timing-function: cubic-bezier(0.55, 0, 0.25, 1);
+  }
+  36% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Page entrance */
+@keyframes page-enter {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
