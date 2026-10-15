@@ -190,7 +190,7 @@ export default function ExperiencePage() {
                     VERIFIED CREDENTIAL
                   </span>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Joes005"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold text-accent hover:text-ink transition-colors flex items-center gap-1"

@@ -141,7 +141,7 @@ async def stream_executive_brief(
                     branch: feat/rag-orchestrator
                   </span>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Joes005"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-accent hover:text-white transition-colors flex items-center gap-1"

@@ -9,36 +9,36 @@ import HwText from "../Pamidor/HwText";
 export default function TrustStats() {
   const stats = [
     {
-      metric: "100%",
-      label: "ON-TIME CLIENT DELIVERY",
-      subtext: "Zero broken production contracts or missed launch deadlines",
+      metric: "ACID",
+      label: "DATA INTEGRITY",
+      subtext: "Row-level locks and transaction boundaries ensuring zero ledger drift",
       accent: "#D12424",
       icon: ShieldCheck,
-      badge: "Verified Track Record"
+      badge: "Core Architecture"
     },
     {
-      metric: "5,000+",
-      label: "ACTIVE USERS & ACCOUNTS",
-      subtext: "Handled across loan portals, student exams & SaaS platforms",
+      metric: "6",
+      label: "ENGINEERED ARCHITECTURES",
+      subtext: "Full-stack web apps, scalable backends, and AI model implementations",
       accent: "#059669",
-      icon: Users,
-      badge: "Real-World Scale"
+      icon: Activity,
+      badge: "Portfolio Systems"
     },
     {
       metric: "< 38ms",
-      label: "P99 ENDPOINT LATENCY",
-      subtext: "Engineered with parameterized InnoDB indexing & Redis caching",
+      label: "P99 QUERY LATENCY",
+      subtext: "Optimized with composite InnoDB indexes and Redis cache-aside patterns",
       accent: "#2563EB",
       icon: Zap,
-      badge: "High Performance"
+      badge: "Benchmarked"
     },
     {
-      metric: "12+",
-      label: "PRODUCTION DEPLOYMENTS",
-      subtext: "Full-lifecycle delivery from architecture to cloud CI/CD",
+      metric: "4+",
+      label: "CORE TECH ECOSYSTEMS",
+      subtext: "Production architectures in React 19, Node.js, Python FastAPI & Laravel",
       accent: "#7C3AED",
-      icon: Activity,
-      badge: "End-to-End Delivery"
+      icon: Users,
+      badge: "Full-Stack Breadth"
     }
   ];
 
@@ -74,7 +74,7 @@ export default function TrustStats() {
           </div>
 
           <p className="font-serif italic text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-md font-light leading-relaxed">
-            Every metric below is backed by real production telemetry — audited databases, high-throughput APIs, and verifiable client systems.
+            Every metric below is backed by verified engineering benchmarks — relational database indexing, low-latency APIs, and structured full-stack architectures.
           </p>
         </div>
 

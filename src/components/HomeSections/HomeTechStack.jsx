@@ -154,7 +154,7 @@ export default function HomeTechStack() {
 
           <div className="flex flex-col items-start md:items-end gap-3">
             <p className="font-serif italic text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-md font-light leading-relaxed">
-              Every technology in my arsenal has been deployed to production and stress-tested under real-world traffic.
+              Every technology in my stack is applied to practical project architectures, transactional backends, or modern web interfaces.
             </p>
             <Link
               to="/skills"
@@ -242,26 +242,26 @@ export default function HomeTechStack() {
         {/* Telemetry Summary Bar */}
         <div className="mt-12 p-6 rounded-2xl bg-black/[0.02] dark:bg-white/[0.02] border border-rule grid grid-cols-1 sm:grid-cols-3 gap-6 font-space text-xs">
           <div className="flex items-center gap-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
             <div>
-              <div className="text-neutral-400 font-bold uppercase">AVERAGE P99 LATENCY</div>
-              <div className="font-funnel text-xl font-bold text-ink">38ms Target Achieved</div>
+              <div className="text-neutral-400 font-bold uppercase">P99 LATENCY TARGET</div>
+              <div className="font-funnel text-xl font-bold text-ink">&lt; 50ms Standard</div>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
             <div>
-              <div className="text-neutral-400 font-bold uppercase">DATABASE CACHE HIT</div>
-              <div className="font-funnel text-xl font-bold text-ink">88.4% Average Ratio</div>
+              <div className="text-neutral-400 font-bold uppercase">DATABASE ARCHITECTURE</div>
+              <div className="font-funnel text-xl font-bold text-ink">Redis Cache-Aside</div>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <span className="w-2.5 h-2.5 rounded-full bg-purple-500" />
             <div>
-              <div className="text-neutral-400 font-bold uppercase">UI RENDERING FRAME RATE</div>
-              <div className="font-funnel text-xl font-bold text-ink">60 FPS Locked Standard</div>
+              <div className="text-neutral-400 font-bold uppercase">UI RENDERING STANDARD</div>
+              <div className="font-funnel text-xl font-bold text-ink">60 FPS Responsive UI</div>
             </div>
           </div>
         </div>

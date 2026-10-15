@@ -389,7 +389,7 @@ export default function ContactPage() {
               {/* Networks */}
               <div className="pt-4 border-t border-rule flex items-center gap-6 font-space text-xs font-bold uppercase tracking-wider">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Joes005"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors"

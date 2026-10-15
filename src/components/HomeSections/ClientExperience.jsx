@@ -1,85 +1,71 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  Briefcase, Calendar, MapPin, CheckCircle2, 
-  ArrowRight, Quote, Award, ArrowUpRight 
-} from "lucide-react";
+import { MapPin, CheckCircle2, ArrowRight } from "lucide-react";
 import HwText from "../Pamidor/HwText";
 
 export default function ClientExperience() {
   const experiences = [
     {
-      period: "2024 — PRESENT",
-      badge: "CURRENT FOCUS",
+      period: "2023 — PRESENT",
+      badge: "FREELANCE & CONTRACT",
       role: "Full Stack Engineer & Independent Creator",
-      company: "Self-Employed / Freelance Client Delivery",
-      location: "Remote / Global",
-      desc: "Architecting modern SaaS web applications, AI-enabled workflow tools, and bespoke software solutions for global and enterprise clients.",
+      company: "Independent Client Delivery & Contract Software",
+      location: "Tamil Nadu, India / Remote",
+      desc: "Architecting modern SaaS web applications, AI-enabled workflow tools, and bespoke software solutions for clients.",
       bullets: [
-        "Engineered multi-tenant platforms handling thousands of transactions with zero ledger drift",
-        "Integrated autonomous AI features reducing routine manual workflow steps by over 40%",
-        "Designed fluid, accessible design systems and real-time monitoring telemetry"
+        "Engineered multi-branch platforms with strict ACID transaction boundaries to prevent ledger drift",
+        "Integrated AI automation features and streaming endpoints to reduce manual data preparation",
+        "Designed responsive, accessible design systems and real-time operational dashboards"
       ],
       tech: ["React 19", "Node.js", "MySQL 8.0", "Redis", "Tailwind CSS"]
     },
     {
-      period: "2023 — 2024",
-      badge: "SPECIALIZATION",
-      role: "Full Stack & AI Developer",
-      company: "AI & SaaS Product Engineering",
-      location: "India",
-      desc: "Combined modern reactive frontend frameworks with LLM inference engines, FastAPI endpoints, and cloud microservices.",
-      bullets: [
-        "Developed AI Copilot and Smart Freelancer Marketplace applications",
-        "Implemented streaming response protocols and prompt engineering guardrails",
-        "Refactored legacy monolith backends into scalable RESTful microservices"
-      ],
-      tech: ["FastAPI", "Python", "React", "Docker", "Vector DB"]
-    },
-    {
       period: "2022 — 2023",
-      badge: "CLIENT WORK",
-      role: "Freelance Web Developer",
-      company: "Client Solutions & Production Portals",
+      badge: "INTERNSHIP & PROJECTS",
+      role: "Software Development Intern / Project Developer",
+      company: "Web & Institutional Applications",
       location: "Tamil Nadu, India",
-      desc: "Partnered directly with founders, business owners, and institutions to bring high-impact custom web applications from concept to production.",
+      desc: "Delivered production portals including Karur Study Centre and student administration workflows.",
       bullets: [
-        "Delivered production portals including Karur Study Centre and financial tracking tools",
-        "Maintained 100% on-time project completion and high client satisfaction",
-        "Managed full software lifecycle: discovery, system design, implementation, and cloud deployment"
+        "Architected role-based student and examination portal with timed test submissions",
+        "Integrated attendance tracking and automated grade card generation",
+        "Managed discovery, schema design, implementation, and deployment"
       ],
-      tech: ["Laravel", "PHP", "MySQL", "JavaScript", "Bootstrap/Tailwind"]
+      tech: ["Laravel", "PHP", "MySQL", "JavaScript", "Tailwind CSS"]
     },
     {
-      period: "2021 — 2022",
-      badge: "FOUNDATIONS",
-      role: "Software Engineering Immersion",
-      company: "Enterprise Systems & Database Foundations",
-      location: "India",
-      desc: "Deep focus on enterprise object-oriented architecture, database normalization, concurrency patterns, and secure REST APIs.",
+      period: "2020 — 2024",
+      badge: "ACADEMIC FOUNDATION",
+      role: "B.Tech in Artificial Intelligence & Data Science",
+      company: "Undergraduate Engineering Degree",
+      location: "Tamil Nadu, India",
+      desc: "Formal degree in Artificial Intelligence, data structures, relational database normalization, and machine learning fundamentals.",
       bullets: [
-        "Built enterprise-style services with Spring Boot, Java, and MySQL",
-        "Mastered ACID principles, index optimization, and API security paradigms"
+        "Built Heart Attack Risk Prediction system with clinical feature extraction and ML classifiers",
+        "Studied enterprise software architectures with Spring Boot, Java, and MySQL ACID normalization",
+        "Acquired formal mathematical foundations in probability, linear algebra, and data science"
       ],
-      tech: ["Java", "Spring Boot", "MySQL", "REST APIs"]
+      tech: ["Python", "Machine Learning", "Java", "Spring Boot", "MySQL", "NumPy", "Pandas"]
     }
   ];
 
-  const testimonials = [
+  const deliveryNotes = [
     {
-      quote:
-        "Levin took our fragmented loan operations across 12 branches and delivered an automated, zero-drift financial portal. Our loan disbursement cycle dropped from 4 days to under 4 hours.",
-      author: "S. V.",
-      title: "Operations Director, Enterprise FinTech Portal",
-      metric: "-85% Disbursement Time"
+      title: "FINVELS — LOAN OPERATIONS & AMORTIZATION ENGINE",
+      summary:
+        "Engineered an automated multi-branch loan repayment and amortization engine. Implemented row-level locks on MySQL InnoDB ledger tables to prevent concurrent balance drift and automated reducing-balance calculation workflows.",
+      domain: "Enterprise FinTech Architecture",
+      architecture: "Row-Level Locks · Zero Drift",
+      badge: "FinTech System"
     },
     {
-      quote:
-        "The Karur Study Centre portal handled 600+ students taking timed competitive mock tests simultaneously without dropping a single submission. Outstanding reliability and code quality.",
-      author: "P. R.",
-      title: "Managing Director, Educational Academy",
-      metric: "600+ Concurrent Students"
+      title: "KARUR STUDY CENTRE — INSTITUTIONAL EXAMINATION PORTAL",
+      summary:
+        "Architected a role-based student and examination administration engine built on Laravel and MySQL. Designed timed test submission queues to buffer concurrent student mock tests with automated scoring and instant grade cards.",
+      domain: "EdTech & Institutional Portal",
+      architecture: "Role-Based Access · Queue Buffering",
+      badge: "Institutional System"
     }
   ];
 
@@ -182,37 +168,41 @@ export default function ClientExperience() {
           ))}
         </div>
 
-        {/* Client Testimonials Row */}
+        {/* Client Deliveries & Outcomes Row */}
         <div className="mt-16 pt-12 border-t border-white/[0.12]">
           <div className="font-space text-xs font-bold tracking-widest uppercase text-accent mb-6">
-            CLIENT FEEDBACK &amp; VERIFIED OUTCOMES
+            VERIFIED PROJECT DELIVERY &amp; ARCHITECTURAL SUMMARIES
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonials.map((t, idx) => (
+            {deliveryNotes.map((note, idx) => (
               <div
                 key={idx}
                 className="p-6 sm:p-8 rounded-2xl bg-black/40 border border-white/[0.08] flex flex-col justify-between"
               >
                 <div>
-                  <Quote className="w-6 h-6 text-accent mb-4" />
-                  <p className="font-serif italic text-sm sm:text-base text-neutral-200 leading-relaxed mb-6 font-light">
-                    "{t.quote}"
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <span className="font-space text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded bg-accent/10 text-accent border border-accent/20">
+                      {note.badge}
+                    </span>
+                    <span className="font-space text-xs text-neutral-400">
+                      {note.domain}
+                    </span>
+                  </div>
+                  <h4 className="font-funnel text-base sm:text-lg font-bold uppercase text-white mb-3">
+                    {note.title}
+                  </h4>
+                  <p className="font-sans text-xs sm:text-sm text-neutral-300 leading-relaxed mb-6 font-light">
+                    {note.summary}
                   </p>
                 </div>
 
                 <div className="flex items-center justify-between pt-4 border-t border-white/[0.08]">
-                  <div>
-                    <div className="font-funnel text-sm font-bold uppercase text-white">
-                      {t.author}
-                    </div>
-                    <div className="font-space text-xs text-neutral-400">
-                      {t.title}
-                    </div>
-                  </div>
-
+                  <span className="font-space text-xs text-neutral-400">
+                    Engineered Outcome
+                  </span>
                   <span className="px-3 py-1 rounded-full text-[11px] font-space font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    {t.metric}
+                    {note.architecture}
                   </span>
                 </div>
               </div>

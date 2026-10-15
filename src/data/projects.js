@@ -11,7 +11,7 @@ export const projects = [
     year: "2024",
     client: "Microfinance & Branch Network Client",
     description:
-      "Enterprise financial portal managing end-to-end loan lifecycles, real-time collection reconciliation, automated EMI amortization schedules, KYC verification pipelines, and multi-tenant audit logs across 12 branch locations.",
+      "Enterprise financial portal managing end-to-end loan lifecycles, real-time collection reconciliation, automated EMI amortization schedules, KYC verification pipelines, and multi-tenant audit logs across multi-branch operations.",
     problem:
       "Legacy micro-lending operations suffered from paper-based receipts, duplicate disbursements across branches, calculation discrepancies in compound interest, and desynchronized collection ledgers that required days of manual audit reconciliation.",
     solution:
@@ -34,10 +34,10 @@ export const projects = [
     featured: true,
     accentGlow: "rgba(245, 158, 11, 0.25)",
     metrics: [
-      { label: "P99 Response Time", value: "38ms", change: "-78%" },
-      { label: "Accounts Managed", value: "5,000+", change: "+120%" },
-      { label: "Disbursement Cycle", value: "< 4 hrs", change: "-85%" },
-      { label: "Ledger Integrity", value: "100.0%", change: "Zero Drift" }
+      { label: "P99 Response Time", value: "< 38ms", change: "Indexed InnoDB" },
+      { label: "Data Integrity", value: "ACID", change: "Row-Level Locks" },
+      { label: "Amortization", value: "Automated", change: "Reducing-Balance" },
+      { label: "Ledger Reconciliation", value: "Real-Time", change: "Zero Drift" }
     ],
     tradeoffs: [
       {
@@ -74,13 +74,14 @@ CREATE TABLE loan_repayments (
       { step: "05", name: "Cache Invalidation", desc: "Targeted Redis cache-aside invalidation for branch metrics" }
     ],
     benchmarkComparison: {
-      metricA: { label: "Disbursement Latency", before: "4 Days (Manual)", after: "3.8 Hours (Automated)" },
-      metricB: { label: "P99 Query Latency", before: "420ms (Legacy)", after: "38ms (Indexed InnoDB)" },
-      metricC: { label: "Concurrent Branch Submissions", before: "12 req/s (Lock Deadlocks)", after: "185 req/s (Row-level Locks)" }
+      metricA: { label: "Disbursement Workflow", before: "Manual Paper Ledger", after: "Automated Amortization Engine" },
+      metricB: { label: "P99 Query Latency", before: "Unindexed Table Scans", after: "< 38ms (Indexed InnoDB)" },
+      metricC: { label: "Concurrent Branch Submissions", before: "Lock Deadlocks", after: "Isolated Row-Level Locks" }
     },
     links: {
-      live: "https://github.com",
-      github: "https://github.com"
+      live: null,
+      github: null,
+      accessNote: "Commercial Client System · Internal NDA"
     },
     previewDetails: {
       engine: "Express.js REST APIs",
@@ -124,10 +125,10 @@ CREATE TABLE loan_repayments (
     featured: true,
     accentGlow: "rgba(99, 102, 241, 0.25)",
     metrics: [
-      { label: "Shift Fill Rate", value: "96.4%", change: "+42%" },
-      { label: "Time to Staff Event", value: "45 mins", change: "Was 2 Days" },
-      { label: "Active Crew Members", value: "3,200+", change: "Verified" },
-      { label: "Payout Latency", value: "Instant", change: "Direct Settlement" }
+      { label: "Concurrency Control", value: "Atomic", change: "Redis Lua Scripts" },
+      { label: "Shift Broadcast", value: "Real-Time", change: "Pub/Sub Queues" },
+      { label: "Attendance Verification", value: "GPS/QR", change: "Timestamp Audits" },
+      { label: "Wage Settlement", value: "Automated", change: "Verified Hours" }
     ],
     tradeoffs: [
       {
@@ -163,18 +164,19 @@ CREATE TABLE catering_shifts (
       { step: "05", name: "Auto Settlement", desc: "Event conclusion generates verified invoice and automated payout ledger" }
     ],
     benchmarkComparison: {
-      metricA: { label: "Shift Fulfillment Speed", before: "36-48 Hours (Calls)", after: "45 Minutes (Automated)" },
-      metricB: { label: "No-Show Rate", before: "28% Industry Avg", after: "3.2% with Reliability Scoring" }
+      metricA: { label: "Shift Coordination", before: "Manual Phone Calls", after: "Automated Shift Broadcast" },
+      metricB: { label: "Attendance Verification", before: "Unverified Attendance Logs", after: "Geo-Fenced QR Verification" }
     },
     links: {
-      live: "https://github.com",
-      github: "https://github.com"
+      live: null,
+      github: null,
+      accessNote: "Commercial Platform · Private Deployment"
     },
     previewDetails: {
       backend: "Node.js REST API Architecture",
       database: "MySQL 8.0 Normalized Schema",
       concurrency: "Redis Slot Locking",
-      status: "Production Live"
+      status: "Client Delivery (Private Deployment)"
     }
   },
   {
@@ -189,15 +191,15 @@ CREATE TABLE catering_shifts (
     year: "2023",
     client: "Coaching Academy & Educational Institutions",
     description:
-      "Comprehensive academic administration portal serving 2,400+ students and educators with multi-role access control, daily attendance tracking, automated student grading, and a high-throughput timed examination engine.",
+      "Comprehensive academic administration portal serving students and educators with multi-role access control, daily attendance tracking, automated student grading, and a queue-buffered examination engine.",
     problem:
       "Physical coaching academy struggled with manual paper attendance registers, slow 3-day turnaround times for OMR test evaluation, chaotic fee receipt books, and poor communication channels between parents and faculty.",
     solution:
       "Architected a centralized school operating system with role-based access for Admins, Teachers, Students, and Parents. Included instant mock exam evaluation with negative-marking logic, attendance tracking, and automated report card generation.",
     highlights: [
       "Granular Role-Based Access Control (Admin, Faculty, Student, Parent)",
-      "Daily biometric & digital attendance management system",
-      "High-concurrency exam engine evaluating 600+ simultaneous submissions",
+      "Daily digital attendance management system",
+      "Queue-buffered exam engine handling concurrent student submissions",
       "Automated percentile rankings, subject weakness diagnosis, and report cards"
     ],
     features: [
@@ -212,10 +214,10 @@ CREATE TABLE catering_shifts (
     featured: true,
     accentGlow: "rgba(59, 130, 246, 0.25)",
     metrics: [
-      { label: "Active Students", value: "2,400+", change: "Enrolled" },
-      { label: "Concurrent Submissions", value: "600+", change: "Peak Window" },
-      { label: "Result Turnaround", value: "1.2s", change: "Was 3 Days" },
-      { label: "System Uptime", value: "99.9%", change: "High Availability" }
+      { label: "Exam Ingestion", value: "Queue-Buffered", change: "Redis Streams" },
+      { label: "Access Roles", value: "4 Distinct", change: "RBAC Policies" },
+      { label: "Result Evaluation", value: "Automated", change: "Instant Scorecards" },
+      { label: "Platform Core", value: "Laravel + MySQL", change: "Normalized Schema" }
     ],
     tradeoffs: [
       {
@@ -248,18 +250,19 @@ CREATE TABLE exam_submissions (
       { step: "04", name: "Rank Generation", desc: "Percentile curves updated and instant report card generated" }
     ],
     benchmarkComparison: {
-      metricA: { label: "Result Generation Time", before: "3 Days (OMR)", after: "1.2 Seconds" },
-      metricB: { label: "Concurrent Submission Stability", before: "Crash at 80 users", after: "600+ without dropped requests" }
+      metricA: { label: "Result Generation Time", before: "Manual Paper Evaluation", after: "Automated Scoring Engine" },
+      metricB: { label: "Submission Traffic Handling", before: "Direct Database Writes", after: "Queue-Buffered Submissions" }
     },
     links: {
-      live: "https://github.com",
-      github: "https://github.com"
+      live: null,
+      github: null,
+      accessNote: "Institutional System · Private Deployment"
     },
     previewDetails: {
       framework: "Laravel REST + React PWA",
       database: "Indexed MySQL 8.0",
       security: "Role-Based Access Control",
-      status: "Production Live"
+      status: "Institutional Delivery (Private)"
     }
   },
   {
@@ -272,7 +275,7 @@ CREATE TABLE exam_submissions (
     tagline: "Autonomous Metric Ingestion & Executive Intelligence Copilot",
     category: "AI SaaS & Workflow Automation",
     year: "2023",
-    client: "SaaS Innovation Lab & Enterprise Founders",
+    client: "AI Product Architecture & Prototype",
     description:
       "Autonomous business intelligence copilot ingesting multi-channel operational data, revenue flows, and CRM signals to synthesize daily executive briefs, predict churn risks, and automate routine client communications.",
     problem:
@@ -297,10 +300,10 @@ CREATE TABLE exam_submissions (
     featured: true,
     accentGlow: "rgba(236, 72, 153, 0.25)",
     metrics: [
-      { label: "Hours Saved / Wk", value: "16+ hrs", change: "Autonomous Workflows" },
-      { label: "Briefs Generated", value: "10,000+", change: "Zero Failure" },
-      { label: "Queue Dispatch", value: "< 25ms", change: "Redis Horizon" },
-      { label: "Accuracy Rate", value: "98.2%", change: "Pydantic Guardrails" }
+      { label: "Pipeline Architecture", value: "FastAPI + Redis", change: "Async Workers" },
+      { label: "Data Validation", value: "Pydantic v2", change: "Strict Schemas" },
+      { label: "AI Integration", value: "Structured JSON", change: "Guardrail Prompts" },
+      { label: "Telemetry Processing", value: "Multi-Source", change: "Automated Synthesis" }
     ],
     tradeoffs: [
       {
@@ -331,18 +334,19 @@ CREATE TABLE executive_briefs (
       { step: "04", name: "Delivery", desc: "Executive brief pushed to web dashboard and email notification" }
     ],
     benchmarkComparison: {
-      metricA: { label: "Daily Report Prep Time", before: "45 Minutes", after: "0 Minutes (Automated)" },
-      metricB: { label: "Anomaly Detection Speed", before: "24-48 Hours", after: "Real-time Notification" }
+      metricA: { label: "Daily Report Prep", before: "Manual Dashboard Aggregation", after: "Automated Synthesis Engine" },
+      metricB: { label: "Anomaly Flagging", before: "Manual Spreadsheet Review", after: "Rule-Based Metric Triggers" }
     },
     links: {
-      live: "https://github.com",
-      github: "https://github.com"
+      live: null,
+      github: null,
+      accessNote: "Proprietary Architecture · Private Repo"
     },
     previewDetails: {
       framework: "FastAPI + React 19",
       aiIntegration: "Batch Inference Queues",
       dataPipeline: "Structured Pydantic v2",
-      status: "Production Live"
+      status: "Completed (Prototype Architecture)"
     }
   },
   {
@@ -380,10 +384,10 @@ CREATE TABLE executive_briefs (
     featured: true,
     accentGlow: "rgba(16, 185, 129, 0.25)",
     metrics: [
-      { label: "Development Status", value: "Active", change: "In Progress" },
-      { label: "SKU Capacity", value: "50,000+", change: "Indexed" },
-      { label: "Stock Sync Latency", value: "< 50ms", change: "Redis Buffer" },
-      { label: "Stockout Reduction", value: "-65%", change: "Target Projected" }
+      { label: "Architecture", value: "Double-Entry", change: "Movement Ledger" },
+      { label: "Warehouse Model", value: "Multi-Location", change: "Transfer Audits" },
+      { label: "Hardware Support", value: "Barcode / QR", change: "Buffered Ingress" },
+      { label: "Development Status", value: "Active", change: "In Progress" }
     ],
     tradeoffs: [
       {
@@ -416,12 +420,13 @@ CREATE TABLE stock_movements (
       { step: "04", name: "Threshold Check", desc: "Safety threshold evaluated; alerts triggered if stock touches reorder point" }
     ],
     benchmarkComparison: {
-      metricA: { label: "Stock Audit Duration", before: "2 Weeks (Manual)", after: "15 Minutes (Digital)" },
-      metricB: { label: "Discrepancy Rate", before: "8.4% Average", after: "< 0.2% Target" }
+      metricA: { label: "Stock Movement Audit", before: "Manual Paper Registers", after: "Immutable Movement Ledger" },
+      metricB: { label: "Safety Reorder", before: "Ad-hoc Review", after: "Automated Threshold Alerts" }
     },
     links: {
-      live: "https://github.com",
-      github: "https://github.com"
+      live: null,
+      github: null,
+      accessNote: "Active Engineering · In Development"
     },
     previewDetails: {
       framework: "React 19 + Node.js",
@@ -513,12 +518,13 @@ class CardioRiskPredictor:
       { step: "05", name: "Visual Report", desc: "Interactive gauge, risk tier badge, and advisory checklist displayed" }
     ],
     benchmarkComparison: {
-      metricA: { label: "Inference Speed", before: "Manual Analysis (Hours)", after: "45ms (Automated Model)" },
-      metricB: { label: "Prediction Sensitivity", before: "72% Baseline", after: "88.6% Optimized Model" }
+      metricA: { label: "Inference Latency", before: "Manual Tabulation", after: "< 60ms (Automated Model)" },
+      metricB: { label: "Model Optimization", before: "Baseline Classifier (72%)", after: "Random Forest Ensemble (88.6%)" }
     },
     links: {
-      live: "https://github.com",
-      github: "https://github.com"
+      live: null,
+      github: null,
+      accessNote: "Academic Capstone · Codebase on Request"
     },
     previewDetails: {
       engine: "Python Machine Learning Pipeline",

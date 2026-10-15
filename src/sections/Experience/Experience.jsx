@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { experiences } from "../../data/experience";
-import { CheckCircle2, Calendar, GitCommit, GitBranch } from "lucide-react";
+import { CheckCircle2, GitBranch } from "lucide-react";
 import { fadeUp } from "../../lib/animations";
 
 export default function Experience() {
@@ -24,7 +24,7 @@ export default function Experience() {
 
         <div className="text-xs font-mono text-zinc-500 bg-[#0E1017] px-4 py-2 rounded-xl border border-white/10 self-start md:self-end">
           <span>Active Practice: </span>
-          <span className="text-emerald-400 font-semibold">Senior & Staff IC</span>
+          <span className="text-emerald-400 font-semibold">Full Stack &amp; AI Engineer</span>
         </div>
       </div>
 

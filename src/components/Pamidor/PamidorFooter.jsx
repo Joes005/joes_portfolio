@@ -48,7 +48,7 @@ export default function PamidorFooter() {
   ];
 
   const socialLinks = [
-    { label: "GitHub", href: "https://github.com" },
+    { label: "GitHub", href: "https://github.com/Joes005" },
     { label: "LinkedIn", href: "https://linkedin.com" },
     { label: "Twitter / X", href: "https://twitter.com" },
     { label: "Direct Email", href: "mailto:levinjoeshwa.dev@gmail.com" }

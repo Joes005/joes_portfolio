@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { 
   ArrowLeft, ArrowRight, CheckCircle2, 
   Database, Server, Activity, GitBranch, 
-  Clock, ExternalLink, HelpCircle 
+  Clock, ExternalLink, HelpCircle, ShieldCheck 
 } from "lucide-react";
 import { projects } from "../../data/projects";
 import HwText from "../../components/Pamidor/HwText";
@@ -139,6 +139,12 @@ export default function ProjectDetails() {
                   <GitBranch className="w-3.5 h-3.5" />
                   <span>REPOSITORY</span>
                 </a>
+              )}
+              {!project.links?.live && !project.links?.github && (
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rule bg-black/[0.02] dark:bg-white/[0.04] text-neutral-600 dark:text-neutral-400 font-space text-xs font-semibold uppercase tracking-wider">
+                  <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" />
+                  <span>{project.links?.accessNote || "Private Enterprise Codebase · Commercial NDA"}</span>
+                </div>
               )}
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { 
   ShieldCheck, Cpu, Zap, Target, MessageSquare, 
-  CheckCircle2, ArrowUpRight, Award, Compass 
+  CheckCircle2, Award 
 } from "lucide-react";
 import HwText from "../Pamidor/HwText";
 
@@ -43,10 +43,10 @@ export default function WhyWorkWithMe() {
     {
       num: "05",
       title: "TRANSPARENT & DIRECT COMMUNICATION",
-      tagline: "Clear timelines, 12-hour response guarantee",
-      desc: "No corporate fluff or technical jargon obscurity. You get direct access, daily async progress logs, immediate blocker alerts, and guaranteed responses within 12 hours.",
+      tagline: "Clear timelines, prompt direct updates",
+      desc: "No corporate fluff or technical jargon obscurity. You get direct access, regular async progress logs, immediate blocker alerts, and clear milestone reviews.",
       icon: MessageSquare,
-      highlight: "12-Hour SLA"
+      highlight: "Direct Access"
     }
   ];
 
@@ -64,7 +64,7 @@ export default function WhyWorkWithMe() {
               <HwText text="WHY WORK WITH ME" flashColor="#D12424" />
               <br />
               <span className="text-neutral-500 dark:text-neutral-400">
-                <HwText text="OVER ANYONE ELSE." flashColor="#D12424" />
+                <HwText text="ENGINEERING STANDARDS." flashColor="#D12424" />
               </span>
             </h2>
           </div>
@@ -143,7 +143,7 @@ export default function WhyWorkWithMe() {
               </h3>
 
               <p className="text-white/90 text-xs sm:text-sm font-sans leading-relaxed mb-6">
-                Every project I deliver includes thorough OpenAPI documentation, normalized database schemas, modular components, automated tests, and Docker configs. If you ever hand it off to an internal team, they will applaud the structure.
+                Every project I deliver is built on normalized database schemas, modular components, documented API endpoints, and clean architectural separation. If you ever hand it off to an internal team, they will applaud the structure.
               </p>
             </div>
 

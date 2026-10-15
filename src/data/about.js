@@ -5,7 +5,7 @@ export const aboutTabs = [
     label: "WHO I AM",
     title: "An engineer driven by product impact and craftsmanship.",
     paragraphs: [
-      "I am Jim Joel, a Full Stack Developer and AI Builder based in Tamil Nadu, India. With a solid academic foundation in Artificial Intelligence & Data Science, I bridge the gap between heavy technical systems and refined frontend interactions.",
+      "I am Levin Joeshwa, a Full Stack Developer and AI Builder based in Tamil Nadu, India. With a solid academic foundation in Artificial Intelligence & Data Science, I bridge the gap between heavy technical systems and refined frontend interactions.",
       "Rather than writing code in isolation, I immerse myself in the problem space. I care deeply about how software feels to the person on the other side of the glass—its responsiveness, clarity, and reliability under pressure.",
       "When I am not designing software architectures or shipping client applications, I experiment with cutting-edge LLM agents, explore cloud deployment patterns, and refine micro-interaction design."
     ],

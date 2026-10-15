@@ -27,7 +27,7 @@ export const greeting = {
 };
 
 export const socialMediaLinks = {
-  github: "https://github.com",
+  github: "https://github.com/Joes005",
   linkedin: "https://linkedin.com",
   gmail: "levinjoeshwa.dev@gmail.com",
   whatsapp: "https://wa.me/918838415403",
@@ -135,39 +135,39 @@ export const workExperiences = {
   display: true,
   experience: [
     {
-      role: "Full Stack Developer & Software Builder",
-      company: "Client Delivery & Independent Solutions",
+      role: "Full Stack Developer & Independent Creator",
+      company: "Freelance & Independent Client Delivery",
       date: "2023 — Present",
       location: "Tamil Nadu, India / Remote",
-      badge: "Active",
+      badge: "Freelance & Contract",
       desc: "Engineering modern web applications, scalable backend systems, business software, and AI-enabled workflows.",
       descBullets: [
-        "Engineered multi-branch Loan Management System with automated amortization and zero ledger drift",
+        "Engineered multi-branch Loan Management System with automated amortization and strict ACID transaction boundaries",
         "Architected on-demand Catering Job Platform with real-time shift workflows and automated wage settlements",
         "Built AI Business Copilot ingesting operational metrics to synthesize executive briefs and anomaly reports"
       ],
-      tech: ["React", "Node.js", "Laravel", "Python", "FastAPI", "MySQL", "Tailwind CSS"]
+      tech: ["React 19", "Node.js", "Laravel", "Python", "FastAPI", "MySQL", "Tailwind CSS"]
     },
     {
-      role: "Software Engineering Intern / Project Developer",
-      company: "Web & Enterprise Applications",
+      role: "Software Development Intern / Project Developer",
+      company: "Web & Institutional Applications",
       date: "2022 — 2023",
       location: "Tamil Nadu, India",
-      badge: "Project Delivery",
-      desc: "Delivered production portals including School Management System (Karur Study Centre) and high-concurrency exam engines.",
+      badge: "Internship & Delivery",
+      desc: "Delivered production portals including School Management System (Karur Study Centre) and exam engines.",
       descBullets: [
-        "Architected role-based student and examination portal serving 2,400+ students",
-        "Implemented high-concurrency exam submission queue processing 600+ simultaneous tests",
+        "Architected role-based student and examination administration portal",
+        "Implemented queue-buffered exam submissions to handle concurrent student tests",
         "Integrated attendance tracking and automated report card generation"
       ],
       tech: ["Laravel", "PHP", "MySQL", "JavaScript", "REST APIs", "Tailwind CSS"]
     },
     {
-      role: "Academic Project & Systems Foundations",
+      role: "Undergraduate Engineering & Academic Foundations",
       company: "B.Tech AI & Data Science Projects",
-      date: "2021 — 2022",
+      date: "2020 — 2024",
       location: "Tamil Nadu, India",
-      badge: "Foundations",
+      badge: "Academic Foundation",
       desc: "Extensive practical implementation of Machine Learning algorithms, predictive modeling, Java backend systems, and database architectures.",
       descBullets: [
         "Developed Heart Attack Risk Prediction System with clinical feature extraction and ML classifiers",
@@ -195,14 +195,11 @@ export const bigProjects = {
       color: "#F59E0B",
       tech: ["React 19", "Node.js", "Express", "MySQL 8.0 (InnoDB)", "Redis", "JWT"],
       metrics: [
-        { label: "P99 Response", value: "38ms" },
-        { label: "Accounts", value: "5,000+" },
-        { label: "Disbursement", value: "< 4 hrs" }
+        { label: "P99 Latency", value: "< 38ms" },
+        { label: "Integrity", value: "ACID Locks" },
+        { label: "Reconciliation", value: "Automated" }
       ],
-      footerLink: [
-        { name: "Live Demo", url: "https://github.com" },
-        { name: "GitHub", url: "https://github.com" }
-      ]
+      footerLink: []
     },
     {
       id: "catering-job-platform",
@@ -216,14 +213,11 @@ export const bigProjects = {
       color: "#6366F1",
       tech: ["React 19", "Node.js", "Express", "MySQL 8.0", "Redis", "REST APIs"],
       metrics: [
-        { label: "Shift Fill Rate", value: "96.4%" },
-        { label: "Staffing Time", value: "45 mins" },
-        { label: "Active Crew", value: "3,200+" }
+        { label: "Concurrency", value: "Atomic Slots" },
+        { label: "Dispatch", value: "Real-Time" },
+        { label: "Attendance", value: "QR / GPS" }
       ],
-      footerLink: [
-        { name: "Live Demo", url: "https://github.com" },
-        { name: "GitHub", url: "https://github.com" }
-      ]
+      footerLink: []
     },
     {
       id: "school-management-system",
@@ -231,20 +225,17 @@ export const bigProjects = {
       brandName: "STUDY PORTAL",
       tagline: "Role-Based Academic Administration & High-Concurrency Exam Engine",
       projectDesc:
-        "Comprehensive academic administration portal serving 2,400+ students and educators with multi-role access control, daily attendance tracking, automated student grading, and a high-throughput timed examination engine.",
+        "Comprehensive academic administration portal serving students and educators with multi-role access control, daily attendance tracking, automated student grading, and a queue-buffered examination engine.",
       category: "EdTech & Institutional Management",
       status: "Completed",
       color: "#3B82F6",
       tech: ["Laravel", "PHP", "MySQL", "React PWA", "REST APIs", "Tailwind CSS"],
       metrics: [
-        { label: "Active Students", value: "2,400+" },
-        { label: "Concurrent Tests", value: "600+" },
-        { label: "Result Latency", value: "1.2s" }
+        { label: "Exam Ingestion", value: "Queue-Buffered" },
+        { label: "Access Roles", value: "4 Distinct" },
+        { label: "Scorecards", value: "Instant" }
       ],
-      footerLink: [
-        { name: "Live Demo", url: "https://github.com" },
-        { name: "GitHub", url: "https://github.com" }
-      ]
+      footerLink: []
     },
     {
       id: "ai-business-copilot",
@@ -258,14 +249,11 @@ export const bigProjects = {
       color: "#EC4899",
       tech: ["Python FastAPI", "React 19", "OpenAI API", "Redis Queues", "MySQL"],
       metrics: [
-        { label: "Hours Saved / Wk", value: "16+ hrs" },
-        { label: "Briefs Generated", value: "10,000+" },
-        { label: "Queue Dispatch", value: "< 25ms" }
+        { label: "Pipeline", value: "FastAPI + Redis" },
+        { label: "Guardrails", value: "Pydantic v2" },
+        { label: "Inference", value: "Async Queue" }
       ],
-      footerLink: [
-        { name: "Live Demo", url: "https://github.com" },
-        { name: "GitHub", url: "https://github.com" }
-      ]
+      footerLink: []
     },
     {
       id: "universal-inventory-management-system",
@@ -279,14 +267,11 @@ export const bigProjects = {
       color: "#10B981",
       tech: ["React 19", "Node.js", "Express", "MySQL 8.0", "Redis", "Tailwind CSS"],
       metrics: [
-        { label: "SKU Capacity", value: "50,000+" },
-        { label: "Sync Latency", value: "< 50ms" },
+        { label: "Architecture", value: "Double-Entry" },
+        { label: "Transfers", value: "Multi-Warehouse" },
         { label: "Status", value: "In Progress" }
       ],
-      footerLink: [
-        { name: "Live Demo", url: "https://github.com" },
-        { name: "GitHub", url: "https://github.com" }
-      ]
+      footerLink: []
     },
     {
       id: "heart-attack-risk-prediction-system",
@@ -304,10 +289,7 @@ export const bigProjects = {
         { label: "Prediction Latency", value: "< 60ms" },
         { label: "Parameters", value: "14 Factors" }
       ],
-      footerLink: [
-        { name: "Live Demo", url: "https://github.com" },
-        { name: "GitHub", url: "https://github.com" }
-      ]
+      footerLink: []
     }
   ],
   display: true
@@ -316,7 +298,7 @@ export const bigProjects = {
 export const openSource = {
   title: "Open Source Projects",
   subtitle: "OPEN-SOURCE CODEBASES, UTILITIES & TOOLS BUILT FOR DEVELOPERS",
-  githubUserName: "levinjoeshwa",
+  githubUserName: "Joes005",
   repos: [
     {
       name: "loan-amortization-core",
@@ -325,7 +307,7 @@ export const openSource = {
       languageColor: "#F7DF1E",
       stars: 48,
       forks: 14,
-      url: "https://github.com"
+      url: "https://github.com/Joes005"
     },
     {
       name: "fastapi-llm-orchestrator",
@@ -334,7 +316,7 @@ export const openSource = {
       languageColor: "#3572A5",
       stars: 62,
       forks: 21,
-      url: "https://github.com"
+      url: "https://github.com/Joes005"
     },
     {
       name: "cardio-risk-ml-pipeline",
@@ -343,7 +325,7 @@ export const openSource = {
       languageColor: "#3572A5",
       stars: 39,
       forks: 12,
-      url: "https://github.com"
+      url: "https://github.com/Joes005"
     },
     {
       name: "catering-shift-scheduler",
@@ -352,7 +334,7 @@ export const openSource = {
       languageColor: "#22C55E",
       stars: 31,
       forks: 8,
-      url: "https://github.com"
+      url: "https://github.com/Joes005"
     },
     {
       name: "laravel-rbac-starter",
@@ -361,7 +343,7 @@ export const openSource = {
       languageColor: "#4F5D95",
       stars: 29,
       forks: 7,
-      url: "https://github.com"
+      url: "https://github.com/Joes005"
     },
     {
       name: "mysql-inventory-ledger",
@@ -370,21 +352,21 @@ export const openSource = {
       languageColor: "#e38c00",
       stars: 41,
       forks: 11,
-      url: "https://github.com"
+      url: "https://github.com/Joes005"
     }
   ],
   display: true
 };
 
 export const achievementSection = {
-  title: "Achievements & Certifications 🏆",
+  title: "Competencies & Core Mastery 🏆",
   subtitle: "Verified milestones, technical credentials, and academic honors",
   achievementsCards: [
     {
       title: "B.Tech in Artificial Intelligence & Data Science",
       subtitle: "Honors degree specializing in Machine Learning, Statistical Inference, and Database Architectures.",
-      issuer: "Academic Board",
-      date: "2024",
+      issuer: "Undergraduate Degree · Tamil Nadu",
+      date: "2020 — 2024",
       icon: "Award",
       badge: "Degree Qualification",
       footerLink: [
@@ -392,12 +374,12 @@ export const achievementSection = {
       ]
     },
     {
-      title: "Full Stack Software Engineering Specialization",
-      subtitle: "Mastery in modern React 19, Node.js REST APIs, Laravel, and MySQL database optimization.",
-      issuer: "Advanced Engineering Council",
-      date: "2024",
+      title: "Full Stack Software Engineering",
+      subtitle: "Production engineering in modern React 19, Node.js REST APIs, Laravel, and MySQL database optimization.",
+      issuer: "Core Stack Mastery",
+      date: "2023 — Present",
       icon: "Award",
-      badge: "Verified Competency",
+      badge: "Core Competency",
       footerLink: [
         { name: "View Skills", url: "/skills" }
       ]
@@ -405,21 +387,21 @@ export const achievementSection = {
     {
       title: "AI & Machine Learning Foundations",
       subtitle: "Hands-on implementation of supervised classification, NumPy, Pandas, and LLM API integrations.",
-      issuer: "Data Science Institute",
-      date: "2023",
+      issuer: "Applied Data Science",
+      date: "2023 — 2024",
       icon: "Brain",
-      badge: "Honors",
+      badge: "Specialization",
       footerLink: [
         { name: "View Projects", url: "/projects" }
       ]
     },
     {
       title: "Relational Database Design & ACID Optimization",
-      subtitle: "Advanced indexing, query plan profiling, row-level locking, and MySQL performance tuning.",
-      issuer: "Database Architecture Board",
-      date: "2023",
+      subtitle: "Normalized schema design, query plan profiling, row-level locking, and MySQL performance tuning.",
+      issuer: "Database Architecture",
+      date: "2023 — 2024",
       icon: "Database",
-      badge: "Specialist",
+      badge: "System Design",
       footerLink: [
         { name: "View Case Studies", url: "/projects/loan-management-system" }
       ]

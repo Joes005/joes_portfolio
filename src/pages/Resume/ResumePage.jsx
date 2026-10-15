@@ -134,7 +134,7 @@ export default function ResumePage() {
               </div>
               <div className="flex md:justify-end items-center gap-3 pt-1">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Joes005"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-accent font-semibold inline-flex items-center gap-1"
