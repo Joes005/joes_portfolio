@@ -135,7 +135,7 @@ export default function PamidorHero() {
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-accent dark:hover:bg-accent dark:hover:text-white transition-all duration-200 shadow-md font-space text-xs font-bold uppercase tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
                 aria-label="Explore My Work - Scroll to Projects Section"
               >
-                <HwText text="EXPLORE MY WORK" baseColor="currentColor" flashColor="#FFFFFF" />
+                <HwText text="Explore My Work" baseColor="currentColor" flashColor="#FFFFFF" />
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
 
@@ -152,7 +152,7 @@ export default function PamidorHero() {
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-rule text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
                 aria-label="Let's Work Together - Scroll to Contact Section"
               >
-                <span>LET'S WORK TOGETHER</span>
+                <span>Let's Work Together</span>
                 <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
 
@@ -180,7 +180,7 @@ export default function PamidorHero() {
                 className="inline-flex items-center gap-1.5 hover:text-accent focus-visible:text-accent focus-visible:outline-none transition-colors duration-200"
               >
                 <GithubIcon className="w-3.5 h-3.5 shrink-0" />
-                <span>GITHUB</span>
+                <span>GitHub</span>
               </a>
               <a
                 href="https://linkedin.com"
@@ -190,7 +190,7 @@ export default function PamidorHero() {
                 className="inline-flex items-center gap-1.5 hover:text-accent focus-visible:text-accent focus-visible:outline-none transition-colors duration-200"
               >
                 <LinkedinIcon className="w-3.5 h-3.5 shrink-0" />
-                <span>LINKEDIN</span>
+                <span>LinkedIn</span>
               </a>
               <a
                 href="mailto:levinjoeshwa.dev@gmail.com"
