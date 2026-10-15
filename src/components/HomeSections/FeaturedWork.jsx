@@ -16,7 +16,8 @@ export default function FeaturedWork() {
   const current = featured[selectedIdx] || featured[0];
 
   return (
-    <section id="work" className="w-full bg-night text-canvas py-20 lg:py-28 border-b border-white/[0.08] relative">
+    <section id="projects" className="w-full bg-night text-canvas py-20 lg:py-28 border-b border-white/[0.08] relative">
+      <div id="work" className="sr-only" />
       <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-white/[0.12]">

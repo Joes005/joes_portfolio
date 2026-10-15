@@ -116,30 +116,47 @@ export default function PamidorHero() {
               </div>
             </div>
 
-            {/* Action Buttons: [Explore My Work] [Let's Connect] [Download Resume] */}
-            <div className="pt-3 flex flex-wrap items-center gap-3 sm:gap-4 font-space text-xs font-bold uppercase tracking-wider">
-              {/* Explore My Work CTA */}
-              <Link
-                to="/projects"
-                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-accent dark:hover:bg-accent dark:hover:text-white transition-all shadow-md font-space text-xs font-bold uppercase tracking-wider"
+            {/* Action Buttons: [Explore My Work] [Let's Work Together] [Resume] */}
+            <div className="pt-3 flex flex-wrap items-center gap-2.5 sm:gap-4 font-space text-xs font-bold uppercase tracking-wider">
+              {/* Primary CTA — Explore My Work (Scrolls to Projects section) */}
+              <a
+                href="#projects"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const target = document.getElementById("projects") || document.getElementById("work");
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-accent dark:hover:bg-accent dark:hover:text-white transition-all duration-200 shadow-md font-space text-xs font-bold uppercase tracking-wider focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
+                aria-label="Explore My Work - Scroll to Projects Section"
               >
                 <HwText text="EXPLORE MY WORK" baseColor="currentColor" flashColor="#FFFFFF" />
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+              </a>
 
-              {/* Let's Connect Button */}
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-rule text-ink hover:border-accent hover:text-accent transition-colors"
+              {/* Secondary CTA — Let's Work Together (Scrolls to Contact section) */}
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-rule text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
+                aria-label="Let's Work Together - Scroll to Contact Section"
               >
-                <span>LET'S CONNECT</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
+                <span>LET'S WORK TOGETHER</span>
+                <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
 
               {/* Resume Button */}
               <Link
                 to="/resume"
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-black/[0.04] dark:bg-white/[0.05] border border-rule text-ink hover:border-accent hover:text-accent transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-black/[0.04] dark:bg-white/[0.05] border border-rule text-ink hover:border-accent hover:text-accent transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent active:scale-95 shrink-0"
+                aria-label="View Resume & Credentials"
               >
                 <FileText className="w-3.5 h-3.5 text-accent" />
                 <span>RESUME</span>
