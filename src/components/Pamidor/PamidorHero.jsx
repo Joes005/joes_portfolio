@@ -62,7 +62,7 @@ export default function PamidorHero() {
             {/* Eyebrow Label */}
             <div className="flex items-center gap-2.5 font-space text-xs font-bold tracking-widest uppercase text-accent">
               <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-              <span>FULL STACK DEVELOPER · SCALABLE BACKENDS · AI SOLUTIONS</span>
+              <span>FULL-STACK DEVELOPMENT · BACKEND ENGINEERING · AI SOLUTIONS</span>
             </div>
 
             {/* Giant Name Headline */}
@@ -77,16 +77,13 @@ export default function PamidorHero() {
               </h1>
             </div>
 
-            {/* Introduction and Value Statement */}
-            <div className="space-y-2 text-ink text-sm sm:text-base leading-snug font-normal max-w-xl pt-1">
-              <p className="font-space font-bold uppercase text-xs sm:text-sm tracking-wider text-accent">
-                Hi, I'm Levin Joeshwa.
-              </p>
-              <p className="font-funnel text-xl sm:text-2xl font-bold text-ink leading-tight">
+            {/* Subheading and Description */}
+            <div className="space-y-3 text-ink max-w-xl pt-1">
+              <h2 className="font-funnel text-xl sm:text-2xl font-bold text-ink leading-tight">
                 I Build Digital Products That Solve Real Problems.
-              </p>
-              <p className="font-serif italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base font-light">
-                Full Stack Developer focused on building modern web applications, scalable backend systems, and AI-powered solutions.
+              </h2>
+              <p className="font-serif italic text-neutral-700 dark:text-neutral-300 text-sm sm:text-base font-light leading-relaxed">
+                I design and develop modern web applications, reliable backend systems, and AI-powered solutions that help businesses turn complex requirements into practical digital products.
               </p>
             </div>
 
