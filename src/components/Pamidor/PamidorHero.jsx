@@ -22,17 +22,19 @@ export default function PamidorHero() {
     setMouseOffset({ x: 0, y: 0 });
   };
 
-  const pillRow1 = [
-    "Full Stack Web Apps",
-    "Scalable Backend Systems",
-    "AI-Powered Solutions"
+  const coreExpertise = [
+    "Full-Stack Development",
+    "Backend Engineering",
+    "AI Applications"
   ];
 
-  const pillRow2 = [
-    "React & Tailwind",
-    "Node.js & Laravel",
-    "Python & FastAPI",
-    "MySQL & Database Design"
+  const technologies = [
+    "React",
+    "Laravel",
+    "Node.js",
+    "Python",
+    "FastAPI",
+    "MySQL"
   ];
 
   const marqueeItems = [
@@ -87,28 +89,28 @@ export default function PamidorHero() {
               </p>
             </div>
 
-            {/* Two Rows of Bordered Technical Pills */}
+            {/* Two Rows of Bordered Technical Badges: Group 1 (Core Expertise) & Group 2 (Technologies) */}
             <div className="pt-1 space-y-2.5">
-              {/* Row 1 */}
+              {/* Group 1 — Core Expertise */}
               <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                {pillRow1.map((pill) => (
+                {coreExpertise.map((item) => (
                   <span
-                    key={pill}
+                    key={item}
                     className="inline-flex items-center px-3.5 py-1.5 rounded-[6px] text-xs sm:text-[13px] font-medium text-ink border border-rule bg-black/[0.02] dark:bg-white/[0.04] hover:border-accent hover:text-accent transition-colors cursor-default"
                   >
-                    <HwText text={pill} flashColor="#D12424" />
+                    <HwText text={item} flashColor="#D12424" />
                   </span>
                 ))}
               </div>
 
-              {/* Row 2 */}
+              {/* Group 2 — Technologies */}
               <div className="flex flex-wrap gap-2 sm:gap-2.5">
-                {pillRow2.map((pill) => (
+                {technologies.map((item) => (
                   <span
-                    key={pill}
+                    key={item}
                     className="inline-flex items-center px-3.5 py-1.5 rounded-[6px] text-xs sm:text-[13px] font-medium text-ink border border-rule bg-black/[0.02] dark:bg-white/[0.04] hover:border-accent hover:text-accent transition-colors cursor-default"
                   >
-                    <HwText text={pill} flashColor="#D12424" />
+                    <HwText text={item} flashColor="#D12424" />
                   </span>
                 ))}
               </div>
