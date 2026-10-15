@@ -177,9 +177,9 @@ export default function PamidorHero() {
           </div>
 
           {/* Right Column: Hero Silhouette Portrait with Clean Frame and Parallax */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
+          <div className="lg:col-span-5 relative flex items-center justify-center lg:justify-end w-full">
             <motion.div
-              className="relative w-full max-w-[460px] lg:max-w-none aspect-[787/904] lg:aspect-auto lg:h-[76vh] overflow-hidden rounded-2xl lg:rounded-none select-none shadow-2xl lg:shadow-none border border-rule/50"
+              className="relative w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[450px] xl:max-w-[480px] aspect-[4/5] overflow-hidden rounded-2xl select-none border border-rule/60 bg-black/[0.02] dark:bg-white/[0.02]"
               animate={{
                 x: mouseOffset.x,
                 y: mouseOffset.y,
@@ -190,17 +190,19 @@ export default function PamidorHero() {
               <img
                 src="/images/hero-portrait.webp"
                 alt="Levin Joeshwa - Full Stack Developer"
-                className="w-full h-full object-cover object-top"
+                width={1232}
+                height={1415}
+                className="w-full h-full object-cover object-top block"
                 loading="eager"
               />
 
               {/* Status Badge floating on image */}
-              <div className="absolute bottom-5 left-5 right-5 p-3.5 rounded-xl bg-canvas/92 dark:bg-[#0A0A0A]/92 backdrop-blur-md border border-rule flex items-center justify-between font-space text-xs">
+              <div className="absolute bottom-3.5 left-3.5 right-3.5 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-3.5 rounded-xl bg-canvas/92 dark:bg-[#0A0A0A]/92 backdrop-blur-md border border-rule flex items-center justify-between font-space text-xs select-none shadow-sm">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-bold text-ink">OPEN FOR OPPORTUNITIES</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                  <span className="font-bold text-ink whitespace-nowrap">OPEN FOR OPPORTUNITIES</span>
                 </div>
-                <span className="text-neutral-500 text-[11px]">TAMIL NADU, INDIA</span>
+                <span className="text-neutral-500 text-[11px] whitespace-nowrap ml-2">TAMIL NADU, INDIA</span>
               </div>
             </motion.div>
           </div>
